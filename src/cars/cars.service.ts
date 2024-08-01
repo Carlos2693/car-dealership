@@ -70,4 +70,9 @@ export class CarsService {
         
         return carDB;
     }
+
+    delete(id: string) {
+        const carDB = this.findOnById(id)
+        this.cars = this.cars.filter(car => car !== carDB)
+    }
 }
